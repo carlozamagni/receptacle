@@ -1,0 +1,15 @@
+{
+	"name": "receptacle",
+	"main": "server.js",
+	"version": "0.0.1",
+  	"main": "socketApp.js",
+  	"author": "Carlo Zamagni",
+	"dependencies": {
+		"express": "4.x",
+		"socket.io": "0.9.x",
+		"logfmt": "~1.1.2"
+	},
+	"engines": {
+    	"node": "0.10.x"
+  	}
+}

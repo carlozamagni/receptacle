@@ -1,0 +1,104 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'express', '4.1.1' ]
+2 info using npm@1.3.24
+3 info using node@v0.10.25
+4 warn package.json receptacle@0.0.1 No description
+5 warn package.json receptacle@0.0.1 No repository field.
+6 warn package.json receptacle@0.0.1 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'express@4.x', null ]
+9 verbose cache add name=undefined spec="express@4.x" args=["express@4.x",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'express@4.x',
+10 verbose parsed url   path: 'express@4.x',
+10 verbose parsed url   href: 'express@4.x' }
+11 verbose cache add name="express" spec="4.x" args=["express","4.x"]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: '4.x',
+12 verbose parsed url   path: '4.x',
+12 verbose parsed url   href: '4.x' }
+13 verbose addNamed [ 'express', '4.x' ]
+14 verbose addNamed [ null, '>=4.0.0-0 <5.0.0-0' ]
+15 verbose cache add [ '4.1.1', null ]
+16 verbose cache add name=undefined spec="4.1.1" args=["4.1.1",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: '4.1.1',
+17 verbose parsed url   path: '4.1.1',
+17 verbose parsed url   href: '4.1.1' }
+18 silly lockFile 72215064-express-4-x express@4.x
+19 verbose lock express@4.x /Users/carlozamagni/.npm/72215064-express-4-x.lock
+20 silly lockFile 3ba1cdcd-4-1-1 4.1.1
+21 verbose lock 4.1.1 /Users/carlozamagni/.npm/3ba1cdcd-4-1-1.lock
+22 silly addNameRange { name: 'express', range: '>=4.0.0-0 <5.0.0-0', hasData: false }
+23 silly lockFile 3ba1cdcd-4-1-1 4.1.1
+24 silly lockFile 3ba1cdcd-4-1-1 4.1.1
+25 verbose addNamed [ '4.1.1', '' ]
+26 verbose addNamed [ null, '*' ]
+27 silly lockFile 6fb549b5-4-1-1 4.1.1@
+28 verbose lock 4.1.1@ /Users/carlozamagni/.npm/6fb549b5-4-1-1.lock
+29 verbose url raw express
+30 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+31 verbose url resolved https://registry.npmjs.org/express
+32 info trying registry request attempt 1 at 22:21:06
+33 verbose etag "CZ00451ZOIQSD3LNBQK3IKOEG"
+34 http GET https://registry.npmjs.org/express
+35 silly addNameRange { name: '4.1.1', range: '*', hasData: false }
+36 verbose url raw 4.1.1
+37 verbose url resolving [ 'https://registry.npmjs.org/', './4.1.1' ]
+38 verbose url resolved https://registry.npmjs.org/4.1.1
+39 info trying registry request attempt 1 at 22:21:06
+40 http GET https://registry.npmjs.org/4.1.1
+41 http 404 https://registry.npmjs.org/4.1.1
+42 silly registry.get cb [ 404,
+42 silly registry.get   { date: 'Mon, 05 May 2014 20:21:03 GMT',
+42 silly registry.get     server: 'CouchDB/1.6.0+build.fauxton-91-g5a2864b (Erlang OTP/R14B04)',
+42 silly registry.get     'content-type': 'application/json',
+42 silly registry.get     via: '1.1 varnish',
+42 silly registry.get     'cache-control': 'max-age=0',
+42 silly registry.get     'content-length': '52',
+42 silly registry.get     'accept-ranges': 'bytes',
+42 silly registry.get     'x-served-by': 'cache-v44-ASH, cache-fra1226-FRA',
+42 silly registry.get     'x-cache': 'MISS, MISS',
+42 silly registry.get     'x-cache-hits': '0, 0',
+42 silly registry.get     'x-timer': 'S1399321263.125445604,VS0,VS44,VE136,VE181',
+42 silly registry.get     'keep-alive': 'timeout=10, max=50',
+42 silly registry.get     connection: 'Keep-Alive' } ]
+43 silly lockFile 6fb549b5-4-1-1 4.1.1@
+44 silly lockFile 6fb549b5-4-1-1 4.1.1@
+45 error 404 '4.1.1' is not in the npm registry.
+45 error 404 You should bug the author to publish it
+45 error 404 It was specified as a dependency of 'receptacle'
+45 error 404
+45 error 404 Note that you can also install from a
+45 error 404 tarball, folder, or http url, or git url.
+46 error System Darwin 13.1.0
+47 error command "node" "/usr/local/bin/npm" "install" "express" "4.1.1"
+48 error cwd /Users/carlozamagni/Workspace/NodeJs/Receptacle
+49 error node -v v0.10.25
+50 error npm -v 1.3.24
+51 error code E404
+52 verbose exit [ 1, true ]
