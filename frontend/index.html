@@ -37,18 +37,23 @@
         <div class="col-md-11 col-xs-11" id="content">
             <div class="container">
                 <div class="content" ng-controller='postedDataController'>
+                    <br>
+                    <div class="alert alert-success alert-dismissable" ng-show="connected">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        Connected!
+                    </div>
 
-                        <div ng-repeat="data in received.slice().reverse()">
-                            <div class="panel panel-default">
-                              <div class="panel-heading">
-                                <h3 class="panel-title">{{ data.query }}</h3>
-                              </div>
-                              <div class="panel-body">
-                                {{ data.body }}
-                              </div>
-                            </div>
-                            <br/>
+                    <div ng-repeat="data in received.slice().reverse()">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">{{ data.query }}</h3>
+                          </div>
+                          <div class="panel-body">
+                            {{ data.body }}
+                          </div>
                         </div>
+                        <br/>
+                    </div>
                 </div>
             </div>
         </div>

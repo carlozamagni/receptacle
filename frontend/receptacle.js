@@ -9,7 +9,7 @@ app.controller('postedDataController', function ($scope){
     //var socket = io.connect('http://secret-hamlet-1742.herokuapp.com');
     
     $scope.received = [];
-    $scope.connected = '';
+    $scope.connected = false;
 
     socket.on('posted', function (data) {
         $scope.received.push({body:data['body'], query:data['query'], params:data['params']});
@@ -17,6 +17,7 @@ app.controller('postedDataController', function ($scope){
     });
 
     socket.on('connected', function (data) {
-        $scope.connected = data['connected'];
+        $scope.connected = true;
+        $scope.$apply();
     });
 });
