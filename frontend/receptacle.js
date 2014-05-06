@@ -1,9 +1,9 @@
 'use strict';
 
-var app = angular.module('receptacle');
+var app = angular.module('receptacle', []);
 
 
-app.controller('postedPusher', function ($scope){
+app.controller('postedDataController', function ($scope){
 
     var socket = io.connect('http://localhost:8090');
     //var socket = io.connect('http://secret-hamlet-1742.herokuapp.com');
@@ -19,6 +19,4 @@ app.controller('postedPusher', function ($scope){
     socket.on('connected', function (data) {
         $scope.connected = data['connected'];
     });
-
-  });
 });
