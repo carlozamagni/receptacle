@@ -8,24 +8,70 @@
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <script src="receptacle.js"></script>
+    <link rel="stylesheet" href="receptacle.css">
     <!-- <script type="text/javascript" src="/libs/angular-socket-io/socket.js"></script> -->
     <script src="http://localhost:8090/socket.io/socket.io.js"></script>
 </head>
 <body>
-    <div class="container" ng-controller='postedDataController'>
-    
-    <div ng-repeat="data in received">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">{{ data.query }}</h3>
-		  </div>
-		  <div class="panel-body">
-		    {{ data.body }}
-		  </div>
-		</div>
-		<br/>
-	</div>
+    <div class="container" id="main">
+        <div class="col-md-1 col-xs-1" id="sidebar">
+            <ul class="nav">
+                <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+            </ul>
 
-	</div>
+            <ul class="nav hidden-xs" id="lg-menu">
+                <li class="active"><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Link 0</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-list"></i> Link 1</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Link 2</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Link 3</a></li>
+            </ul>
+
+            <ul class="nav visible-xs" id="xs-menu">
+                <li><a href="#" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
+                <li><a href="#" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
+                <li><a href="#" class="text-center"><i class="glyphicon glyphicon-paperclip"></i></a></li>
+                <li><a href="#" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-11 col-xs-11" id="content">
+            <div class="container">
+                <div class="content" ng-controller='postedDataController'>
+
+                        <div ng-repeat="data in received.slice().reverse()">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title">{{ data.query }}</h3>
+                              </div>
+                              <div class="panel-body">
+                                {{ data.body }}
+                              </div>
+                            </div>
+                            <br/>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type='text/javascript'>
+        $(document).ready(function() {
+
+            /* off-canvas sidebar toggle */
+
+            $('[data-toggle=offcanvas]').click(function() {
+                $(this).toggleClass('visible-xs text-center');
+                $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+                $('.sidebar-offcanvas').toggleClass('active');
+                $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
+                $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
+                $('#btnShow').toggle();
+            });
+
+        });
+    </script>
+
 </body>
 </html>

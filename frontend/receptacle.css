@@ -1,0 +1,39 @@
+html, body{
+    height:100%;
+}
+
+#sidebar {
+    padding:0px;
+    padding-top:15px;
+    height: 100%;
+    background-color:#444444;
+}
+
+#main {
+    height:100%;
+    width: 100%;
+    margin-top: -50px;
+    padding: 50px 0 0 0; /*set left/right padding according to needs*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nav {
+    font-family:Arial,sans-serif;
+    font-size:13px;
+}
+
+#sidebar a {
+    color:#ffffff;
+    /*background-color:transparent;*/
+    background-color:#444444;
+    text-shadow:0 0 2px #000000;
+    padding-left: 10px;
+}
+#sidebar .nav li>a:hover {
+    background-color:#393939;
+}
+
+#sidebar .nav li>a:hover {
+    background-color:#393939;
+}
