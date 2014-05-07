@@ -2,7 +2,6 @@
 	"name": "receptacle",
 	"main": "server.js",
 	"version": "0.0.1",
-  	"main": "socketApp.js",
   	"author": "Carlo Zamagni",
 	"dependencies": {
 		"express": "4.x",
